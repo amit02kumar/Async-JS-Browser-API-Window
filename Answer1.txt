@@ -1,0 +1,23 @@
+Define XMLHttpRequest object:-
+
+The XMLHttpRequest object is a built-in JavaScript object that provides a way to interact with servers. It allows you to send HTTP or HTTPS requests to a web server and load the response data back into the script. This object is commonly used for making AJAX (Asynchronous JavaScript and XML) requests to fetch data without reloading the entire web page.
+Creating an XMLHttpRequest Object
+To create an instance of the XMLHttpRequest object, you use the new keyword:
+let xhr = new XMLHttpRequest();
+
+Methods of XMLHttpRequest
+open(method, url, async): Initializes a request.
+method: The HTTP method to use (e.g., "GET", "POST").
+url: The URL to send the request to.
+async: A boolean value indicating whether the request should be asynchronous (true) or synchronous (false).
+send(body): Sends the request to the server. The body parameter is optional and is used with methods like "POST" to send data.
+setRequestHeader(header, value): Sets the value of an HTTP request header. Must be called after open() but before send().
+abort(): Aborts the request if it has already been sent.
+
+How XMLHttpRequest is Used in AJAX:-
+Here's a step-by-step guide on how XMLHttpRequest is used in AJAX:
+
+Create an XMLHttpRequest object: This is the first step to initiate an AJAX request.
+Configure the request: Specify the HTTP method, URL, and whether the request should be asynchronous.
+Send the request: Use the send() method to send the request to the server.
+Handle the response: Define callback functions to process the response from the server.

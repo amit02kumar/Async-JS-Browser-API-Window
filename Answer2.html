@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Names Fetcher</title>
+  <style>
+    #output {
+      font-family: Arial, sans-serif;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Names Fetcher</h1>
+  <div id="output">Loading...</div>
+
+  <script>
+    // Create a new XMLHttpRequest object
+    let xhr = new XMLHttpRequest();
+
+    // Define the API endpoint URL
+    let url = 'https://jsonplaceholder.typicode.com/users';
+
+    // Configure the request
+    xhr.open('GET', url, true);
+
+    // Define what happens on successful data retrieval
+    xhr.onload = function () {
+      // Check if the request was successful (status code 200)
+      if (xhr.status >= 200 && xhr.status < 300) {
+        // Parse the JSON response
+        let users = JSON.parse(xhr.responseText);
+
+        // Log the list of user names to the console
+        console.log('List of User Names:');
+        users.forEach(function (user) {
+          console.log(user.name);
+        });
+
+        // Output the list of user names to the browser
+        let outputElement = document.getElementById('output');
+        if (outputElement) {
+          outputElement.textContent = users.map(user => user.name).join(', ');
+        }
+      } else {
+        console.error('Request failed with status:', xhr.status);
+        document.getElementById('output').textContent = 'Failed to load user names.';
+      }
+    };
+
+    // Handle network errors
+    xhr.onerror = function () {
+      console.error('Request failed');
+      document.getElementById('output').textContent = 'Failed to load user names.';
+    };
+
+    // Send the request
+    xhr.send();
+  </script>
+</body>
+</html>

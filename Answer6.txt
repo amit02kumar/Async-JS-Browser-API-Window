@@ -1,0 +1,37 @@
+The localStorage and sessionStorage APIs are part of the Web Storage API, providing mechanisms to store key-value pairs in a web browser. They are used to store data on the client side, making it accessible across different pages of a web application without requiring a server-side database or persistent cookies.
+
+localStorage
+Purpose: localStorage is used to store data with no expiration time. The data persists even after the browser is closed and reopened, making it suitable for storing long-term data.
+
+Usage:
+Set Item: localStorage.setItem(key, value)
+Get Item: localStorage.getItem(key)
+Remove Item: localStorage.removeItem(key)
+Clear Storage: localStorage.clear()
+
+Use Cases:
+Remembering user preferences (e.g., theme, language settings).
+Storing data from forms to prevent loss on page reloads.
+Caching static data that doesn't change often, such as product information in a catalog.
+sessionStorage
+Purpose: sessionStorage is used to store data for the duration of a single page session. The data is cleared when the page session ends, typically when the browser or tab is closed. It is suitable for storing temporary data that should not persist beyond the session.
+
+Usage:
+Set Item: sessionStorage.setItem(key, value)
+Get Item: sessionStorage.getItem(key)
+Remove Item: sessionStorage.removeItem(key)
+Clear Storage: sessionStorage.clear()
+
+Use Cases:
+Storing temporary form data that should not persist after the session ends.
+Keeping track of user progress through a multi-step form or survey.
+Storing temporary state or session-specific data, like a shopping cart that resets after the session.
+Key Differences between localStorage and sessionStorage
+
+Persistence:
+localStorage: Data persists even after the browser is closed and reopened.
+sessionStorage: Data is cleared when the page session ends (e.g., browser or tab is closed).
+
+Scope:
+localStorage: Data is accessible across multiple tabs and windows of the same origin.
+sessionStorage: Data is accessible only within the same tab or window.

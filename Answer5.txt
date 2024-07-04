@@ -1,0 +1,36 @@
+Browser APIs provide a wide range of functionalities to JavaScript developers, enabling them to interact with and manipulate web pages, manage browser sessions, access device hardware, and much more. Here are some common Browser APIs:
+
+1. Document Object Model (DOM) API
+Description: The DOM API allows developers to interact with and manipulate the structure and content of HTML and XML documents.
+Common Methods/Properties:
+document.getElementById(): Selects an element by its ID.
+document.querySelector(): Selects the first element that matches a CSS selector.
+element.innerHTML: Gets or sets the HTML content of an element.
+element.addEventListener(): Attaches an event handler to an element.
+
+2. Fetch API
+Description: The Fetch API provides a modern, promise-based way to make HTTP requests to servers.
+Common Methods/Properties:
+fetch(): Initiates a fetch request and returns a Promise that resolves to the response.
+
+3. Canvas API
+Description: The Canvas API allows for drawing graphics via JavaScript, using the <canvas> HTML element.
+Common Methods/Properties:
+canvas.getContext(): Returns a drawing context on the canvas.
+context.fillRect(): Draws a filled rectangle.
+context.beginPath(): Begins a path or resets the current path.
+context.arc(): Creates an arc/curve (used to create circles).
+
+4. Geolocation API
+Description: The Geolocation API allows web applications to access the user's geographical location.
+Common Methods/Properties:
+navigator.geolocation.getCurrentPosition(): Gets the current position of the device.
+navigator.geolocation.watchPosition(): Watches the current position of the device and calls a callback whenever the position changes.
+
+5. Web Storage API
+Description: The Web Storage API provides mechanisms by which browsers can store key-value pairs, including localStorage and sessionStorage.
+Common Methods/Properties:
+localStorage.setItem(): Sets the value of a key.
+localStorage.getItem(): Gets the value of a key.
+localStorage.removeItem(): Removes a key.
+sessionStorage follows the same methods but only persists data for the duration of the page session.
